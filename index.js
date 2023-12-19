@@ -1,6 +1,6 @@
 const express = require('express')
-const mongoose = require('mongoose')
 
+require('dotenv').config()
 
 const app = express()
 
@@ -8,4 +8,16 @@ const app = express()
 
 
 port = process.env.PORT || 5000
-app.listen(console.log(`server listening on ${port} `))
+
+const serverStart = async () => {
+
+    try {
+        app.listen(port, () => 
+        console.log(`server listening on port ${port}`)
+        )
+    } catch (error) {
+        console.log(error)
+        
+    }
+}
+serverStart()
