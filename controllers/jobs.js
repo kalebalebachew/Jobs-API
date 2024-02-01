@@ -65,12 +65,6 @@ app.post('/updateJob', (req, res) => {
         res.status(500).json({ error: err })
       })
   })
-  //Get a Job
-
-  app.get('/getJob',(req,res) =>{
-     
-
-  })
 
   
   
